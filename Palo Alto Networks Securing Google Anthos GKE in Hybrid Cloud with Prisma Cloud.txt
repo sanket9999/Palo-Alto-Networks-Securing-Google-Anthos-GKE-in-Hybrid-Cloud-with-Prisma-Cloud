@@ -1,0 +1,54 @@
+curl https://storage.googleapis.com/qwiklabs-code/prisma_cloud_compute_edition_21_04_421.tar.gz -o prisma_cloud_compute_edition_21_04_421.tar.gz
+
+mkdir prisma_cloud_compute_edition
+
+tar xvzf prisma_cloud_compute_edition_21_04_421.tar.gz -C prisma_cloud_compute_edition/
+
+cd prisma_cloud_compute_edition
+
+./linux/twistcli console export kubernetes --service-type LoadBalancer
+
+Try this commands if you get error
+
+Use nano editior
+then ctrl x 
+y
+enter
+ 
+If you get error in admin then close terminal and type these commands
+
+git clone -b workshop-v1 https://github.com/GoogleCloudPlatform/anthos-workshop.git anthos-workshop
+
+cd anthos-workshop
+
+export KOPS_STATE_STORE=gs://$DEVSHELL_PROJECT_ID-kops-remote
+NAME=remote.k8s.local
+kops export kubecfg ${NAME} --admin
+
+curl https://storage.googleapis.com/qwiklabs-code/prisma_cloud_compute_edition_21_04_421.tar.gz -o prisma_cloud_compute_edition_21_04_421.tar.gz
+
+mkdir prisma_cloud_compute_edition
+
+tar xvzf prisma_cloud_compute_edition_21_04_421.tar.gz -C prisma_cloud_compute_edition/
+
+cd prisma_cloud_compute_edition
+
+./linux/twistcli console export kubernetes --service-type LoadBalancer
+
+Token 
+
+kubectl create -f twistlock_console.yaml
+
+kubectl get service -w -n twistlock
+
+Copy ip address and paste in browser
+login and password
+
+
+
+export KOPS_STATE_STORE=gs://$DEVSHELL_PROJECT_ID-kops-remote
+NAME=remote.k8s.local
+kops export kubecfg ${NAME} --admin
+
+
+
